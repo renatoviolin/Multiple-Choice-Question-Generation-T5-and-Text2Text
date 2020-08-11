@@ -1,5 +1,5 @@
 # Multiple Choice Question Generation with Google T5 and Text2Text (BERT based model)
-This application uses the work from [Question Generation using Transformers](https://github.com/patil-suraj/question_generation), [text2text](https://github.com/artitw/text2text) and [Sense2Vec](https://github.com/explosion/sense2vec), together to generate questions with correct answers and distractors (when possible).
+This application uses the work from [Question Generation using Transformers 🤗](https://github.com/patil-suraj/question_generation), [text2text](https://github.com/artitw/text2text) and [Sense2Vec](https://github.com/explosion/sense2vec), together to generate questions with correct answers and distractors (when possible).
 
 It is served with [FastApi](https://fastapi.tiangolo.com)
 
@@ -26,4 +26,7 @@ uvicorn app:app --reload --log-level debug
 
 Open your browser http://localhost:8000
 
+
+### Disclaimer
+Feel free to fork, improve and share. If you improve, let me know the improvements.
 
