@@ -6,9 +6,11 @@ It is served with [FastApi](https://fastapi.tiangolo.com)
 It's also good to compare the performace of those two models T5 and Text2Text that is BERT based.
 
 
-### Application
-Place some text and click Generate.
-
+### Application Details
+1. Both model take the input text and produces questions and one correct answer for each question.
+2. For each correct answer, take the this correct and feed the Sense2Vec to get most similar sentences for that correct answer.
+3. Ignore the highest score similarities to produce the distractors.
+4. When the answer is a noun refering to person name or entity, the Sense2Vec don't find a candidate and the return is none. 
 
 ![question_generation](demo.gif)
 
