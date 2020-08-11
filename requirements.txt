@@ -1,0 +1,10 @@
+torch
+transformers
+fastapi
+uvicorn
+aiofiles
+Jinja2
+numpy
+tensorflow
+spacy
+nltk

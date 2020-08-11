@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <title>Deep Learning in Action</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{url_for('static', path='css/bootstrap.min.css')}}" rel=" stylesheet">
+    <link href="{{url_for('static', path='css/app.css')}}" rel=" stylesheet">
+    <script src="{{url_for('static', path='js/jquery-3.4.1.min.js')}}"></script>
+    <script src="{{url_for('static', path='js/bootstrap.min.js')}}" />
+    </script>
+    <script src="{{url_for('static', path='js/app.js')}}" />
+    </script>
+</head>
+
+
+<body>
+    <div class="overlay">
+        <div class="spinner-border text-primary" role="status"><span class="sr-only">Loading...</span></div>
+    </div>
+    <h2> Deep Learning in Action </h2>
+    <div class="row">
+        <div class="col-sm-1"></div>
+
+        <div class="col-sm-10">
+            <center>
+                <h3>Question Generation with T5 and Text2Text</h3>
+            </center>
+            <br>
+            <h5> Insert a text to generate questions </h5>
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <textarea class="form-control input-text" id="input-text"></textarea>
+                </div>
+            </div>
+
+            <div class="form-row ">
+                <div class="form-group col-md-3">
+                    <label for="max_answers" id="label_max_answers">Max questions: 5</label>
+                    <input type="range" class="custom-range" min="1" max="10" value="5" step="1" id="max_answers">
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="distractor" id="label_distractor">Generate distractors</label>
+                    <select name="early_stop" class="form-control" id="generate_distractor">
+                        <option value="1" checked>True</option>
+                        <option value="0">False</option>
+                    </select>
+
+                </div>
+                <div class="form-group col-md-3">
+                    <br>
+                    <button class="btn btn-success btn-lg btn-block" id="btn_generate">Generate</button>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-center">T5 Base model</h5>
+                    <div class="question-container" id="question-container-T5"></div>
+                </div>
+                <div class="col-md-6">
+                    <h5 class="text-center">Text2Text model</h5>
+                    <div class="question-container" id="question-container-Text2Text"></div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-sm-1"></div>
+    </div>
+</body>
+
+</html>
