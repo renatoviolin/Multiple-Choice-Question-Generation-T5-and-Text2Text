@@ -20,7 +20,6 @@ It's also good to compare the performace of those two models T5 and Text2Text th
 
 ```
 pip install -r requirements.txt
-cd web-app
 uvicorn app:app --reload --log-level debug
 ```
 
