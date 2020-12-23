@@ -8,3 +8,6 @@ numpy
 tensorflow
 spacy
 nltk
+text2text
+boto3
+sense2vec
